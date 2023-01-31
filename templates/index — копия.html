@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        	$('body').css('zoom', '125%');
+            $("a").hover(function(){
+            	$(this).css("font-style", "italic");
+				$(this).append("<span> &#8594; </span>");
+            }, function(){
+                $(this).css("font-style", "normal");
+                $(this).find("span:last").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="name-container">
+			<img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1UDzT0NjCSIQqoNJ2KDx3ZJT6u0WlTfN6" alt="image">
+			<h3> Владимир Гришанов </h3>
+			<p> Какие-то слова о себе. Прежде всего, понимание сути ресурсосберегающих технологий создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса системы массового участия. </p>
+		</div>
+		<div class="link-container">
+			<h2> Ссылки
+				<a class="link-1" href="#"> NOTION </a>
+				<a class="link-2" href="#"> TELEGRAM </a>
+				<a class="link-3" href="#"> NEWS </a>
+			</h2>
+		</div>
+	</div>
+</body>
+</html>
+
