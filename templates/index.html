@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        	$('body').css('zoom', '125%');
+            $("a").hover(function(){
+            	$(this).css("font-style", "italic");
+				$(this).append("<span> &#8594; </span>");
+            }, function(){
+                $(this).css("font-style", "normal");
+                $(this).find("span:last").remove();
+            });
+        });
+    </script>
+    <style>
+        /* Add styles for mobile devices */
+        @media only screen and (max-width: 600px) {
+            /* Change the font-size of the text */
+            h3, p {
+                font-size: 14px;
+            }
+
+            /* Change the size of the profile picture */
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+
+            /* Change the layout of the link container */
+            .link-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Change the size of the links */
+            .link-1, .link-2, .link-3 {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="name-container">
+			<img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1UDzT0NjCSIQqoNJ2KDx3ZJT6u0WlTfN6" alt="image">
+			<h3> Владимир Гришанов </h3>
+			<p>  </p>
+		</div>
+		<div class="link-container">
+			<h2> Ссылки
+				<a class="link-1" href="#"> CONTENT </a>
+				<a class="link-2" href="https://t.me/dvabistar"> TELEGRAM </a>
+				<a class="link-3" href="https://www.notion.so/grishanov/f6140cb292fd40febcf407b5c9754e39"> ПАРСИНГ </a>
+			</h2>
+		</div>
+	</div>
+</body>
+</html>
+
